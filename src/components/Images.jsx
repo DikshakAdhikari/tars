@@ -9,16 +9,16 @@ export const Images= ({img, setImgContent, setShowModal}) => {
     
     return (
         <>
-        <div style={{width:"20vw", cursor:"pointer" }}  onClick={()=>{
+        <div style={{width:"100%", height:"100%", cursor:"pointer" }}  onClick={()=>{
             setImgContent(img);
             setShowModal(true);
 
             }} >
-         <Card sx={{ maxWidth: 345 }}>
+         <Card sx={{ width:"20vw", height:"40vh" }}>
     
          <CardMedia
            component="img"
-           height="194"
+           height="250"
            image={img.urls.thumb} 
            alt="Paella dish"
          />
