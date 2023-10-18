@@ -1,16 +1,47 @@
+import { Avatar, Card, CardActions, CardHeader, CardMedia, IconButton, Modal } from "@mui/material"
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import { useState } from "react";
+import PopupDisplay from "./PopupDisplay";
 
-export const Images= ({img}) => {
+export const Images= ({img, setImgContent, setShowModal}) => {
+    
+    
     
     return (
-        <div style={{display:"flex"}}>
-        
-            {img.user.name}
-            {/* {img.user.instagram_username} */}
-            <img src={img.user.profile_image.medium} alt="" />
-            {img.cover_photo.likes}
-            {img.title}
-            <img src={img.cover_photo.urls.thumb} alt="fgf" />
+        <>
+        <div style={{width:"20vw", cursor:"pointer" }}  onClick={()=>{
+            setImgContent(img);
+            setShowModal(true);
 
-        </div>
+            }} >
+         <Card sx={{ maxWidth: 345 }}>
+    
+         <CardMedia
+           component="img"
+           height="194"
+           image={img.cover_photo.urls.thumb} 
+           alt="Paella dish"
+         />
+           <CardHeader
+           avatar={
+               <Avatar alt="Remy Sharp" src={img.user.profile_image.medium} />
+             }
+           
+           title={img.user.name}
+           subheader={img.user.instagram_username}
+         />
+         <CardActions disableSpacing>
+           <ThumbUpOffAltIcon /> 
+           <IconButton aria-label="share">
+           {img.cover_photo.likes}
+           </IconButton>
+          
+         </CardActions>
+        
+     
+       </Card> 
+       </div>
+       
+       </>
     )
 }
