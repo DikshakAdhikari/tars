@@ -37,6 +37,7 @@ export const Search = () => {
     fun();
   }, [search]);
 
+ 
 
   return (
     <div
