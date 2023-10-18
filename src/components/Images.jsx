@@ -20,7 +20,7 @@ export const Images= ({img, setImgContent, setShowModal}) => {
            component="img"
            height="250"
            image={img.urls.thumb} 
-           alt="Paella dish"
+           alt= {img.title}
          />
            <CardHeader
            avatar={
@@ -28,11 +28,11 @@ export const Images= ({img, setImgContent, setShowModal}) => {
              }
            
            title={img.user.name}
-           subheader={img.user.instagram_username}
+           subheader={`@${img.user.instagram_username}`}
          />
          <CardActions disableSpacing>
            <ThumbUpOffAltIcon /> 
-           <IconButton aria-label="share">
+           <IconButton aria-label="like" height="">
            {img.likes}
            </IconButton>
           

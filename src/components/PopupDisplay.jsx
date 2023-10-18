@@ -13,11 +13,11 @@ const PopupDisplay = ({img,setShowModal}) => {
         </div>
 
     <div style={{display:"flex", height:"85% ",justifyContent:"center", alignItems:"center"}}   >
-     <Card sx={{ width: '50%', height:'80%'}}  >
+     <Card sx={{ width: '50%', height:'94%'}}  >
 
      <CardMedia
        component="img"
-       height="500"
+       height="600"
        image={img.urls.full} 
        alt="Paella dish"
      />
@@ -27,7 +27,7 @@ const PopupDisplay = ({img,setShowModal}) => {
          }
        
        title={img.user.name}
-       subheader={img.user.instagram_username}
+       subheader={`@${img.user.instagram_username}`}
      />
      <CardActions disableSpacing>
        <ThumbUpOffAltIcon /> 
