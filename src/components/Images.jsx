@@ -19,7 +19,7 @@ export const Images= ({img, setImgContent, setShowModal}) => {
          <CardMedia
            component="img"
            height="194"
-           image={img.cover_photo.urls.thumb} 
+           image={img.urls.thumb} 
            alt="Paella dish"
          />
            <CardHeader
@@ -33,7 +33,7 @@ export const Images= ({img, setImgContent, setShowModal}) => {
          <CardActions disableSpacing>
            <ThumbUpOffAltIcon /> 
            <IconButton aria-label="share">
-           {img.cover_photo.likes}
+           {img.likes}
            </IconButton>
           
          </CardActions>

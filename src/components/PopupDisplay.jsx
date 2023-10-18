@@ -13,12 +13,12 @@ const PopupDisplay = ({img,setShowModal}) => {
         </div>
 
     <div style={{display:"flex", height:"85% ",justifyContent:"center", alignItems:"center"}}   >
-     <Card sx={{ width: '25%', height:'55%'}}  >
+     <Card sx={{ width: '50%', height:'80%'}}  >
 
      <CardMedia
        component="img"
-       height="290"
-       image={img.cover_photo.urls.full} 
+       height="500"
+       image={img.urls.full} 
        alt="Paella dish"
      />
        <CardHeader
@@ -32,7 +32,7 @@ const PopupDisplay = ({img,setShowModal}) => {
      <CardActions disableSpacing>
        <ThumbUpOffAltIcon /> 
        <IconButton aria-label="share">
-       {img.cover_photo.likes}
+       {img.likes}
        </IconButton>
       
      </CardActions>
