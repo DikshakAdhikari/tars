@@ -19,7 +19,7 @@ const PopupDisplay = ({img,setShowModal}) => {
        component="img"
        height="600"
        image={img.urls.full} 
-       alt="Paella dish"
+       alt={img.title}
      />
        <CardHeader
        avatar={
@@ -39,6 +39,7 @@ const PopupDisplay = ({img,setShowModal}) => {
     
  
    </Card> 
+
    </div>
    
    </div>
