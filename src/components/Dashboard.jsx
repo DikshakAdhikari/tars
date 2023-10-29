@@ -1,55 +1,60 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {AiOutlineBell } from 'react-icons/ai'
 import {FaUserCircle } from 'react-icons/fa'
  import {BsCaretDown} from 'react-icons/bs'
+ import {RiContactsLine} from 'react-icons/ri'
+ import {FcIdea} from 'react-icons/fc'
+ import {AiOutlineMessage} from 'react-icons/ai'
+ import websiteLogo from '../assets/logo-min.png'
 
 
-const Dashboard = () => {
+const Dashboard = ({title}) => {
   const navigate = useNavigate();
+
   return (
     <div className="dashboard">
       <div className="sidebar">
-      <div style={{padding:"1.5rem"}} >Icon</div>
-        < Link className="dash-section link-tag">Getting Started</ Link>
+      <img style={{height:"5vh", width:"3vw",padding:"0.8rem"}} src={websiteLogo} alt="" />
+        < Link to={'/dashboard'} className="dash-section link-tag">Getting Started</ Link>
         <hr></hr>
 
         <div className="dash-section">
           <div className="link-tag" style={{display:"flex", gap:"1rem"}}> 
             <AiOutlineBell />
-            <div>Insights</div>
+            <Link to={'/dashboard/Insights'} className="link-tag">Insights</Link>
             <BsCaretDown style={{marginLeft:"2rem", cursor:"pointer"}} />
           </div>
           <div className="link-tag" style={{display:"flex", gap:"1rem"}}> 
-            <AiOutlineBell />
-            <div >Contacts</div>
+            <RiContactsLine />
+            <Link to={'/dashboard/Contacts'} className="link-tag" >Contacts</Link>
             
           </div>
-          <Link className="link-tag">Priority Report</Link>
+          <Link to={'/dashboard/PriorityReport'} className="link-tag">Priority Report</Link>
         </div>
         <hr></hr>
 
         <div className="dash-section">
         <div className="link-tag" style={{display:"flex", gap:"1rem"}}> 
             
-            <div>Channels</div>
+            <Link className="link-tag" to={"/dashboard/Channels"}>Channels</Link>
             <BsCaretDown style={{marginLeft:"3.2rem" , cursor:"pointer"}} />
           </div>
           <div className="link-tag" style={{display:"flex", gap:"1rem"}}> 
             
-            <div>Build Flow</div>
+            <Link className="link-tag" to={"/dashboard/BuildFlow"}>Build Flow</Link>
             <BsCaretDown style={{marginLeft:"2.2rem", cursor:"pointer"}} />
           </div>
-          <Link className="link-tag">Design Audit</Link>
-          <Link className="link-tag">Integrations</Link>
+          <Link to={"/dashboard/DesignAudit"} className="link-tag">Design Audit</Link>
+          <Link to={"/dashboard/Integrations"} className="link-tag">Integrations</Link>
         </div>
         <hr></hr>
-        <Link className="dash-section link-tag">Knowledge Base</Link>
+        <Link to={"/dashboard/KnowledgeBase"} className="dash-section link-tag">Knowledge Base</Link>
       </div>
 
       <div className="main-dash">
         <div className="dash-bar">
-          <div style={{ padding: "1rem", fontSize: "1.5rem" }}>Dashboard</div>
+          <div style={{ padding: "1rem", fontSize: "1.5rem" }}>{title}</div>
           <div style={{ display: "flex", gap: "2rem", padding: "2rem" }}>
             <Link className="link-tag">Help</Link>
             <Link className="link-tag"></Link>
@@ -102,7 +107,7 @@ const Dashboard = () => {
               gap: "1rem",
             }}
           >
-            <div>Icon</div>
+            <div style={{ paddingBottom: "0.6rem", fontSize:"1.6rem" }}><FcIdea /></div>
             <div style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
               Recieve replies form your customers
             </div>
@@ -115,7 +120,7 @@ const Dashboard = () => {
               padding: "1rem",
             }}
           >
-            <div style={{ paddingBottom: "1rem" }}>Icon</div>
+            <div style={{ paddingBottom: "0.6rem", fontSize:"1.6rem" }}><FcIdea /></div>
             <div style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
               Make phones ring
             </div>
@@ -138,7 +143,7 @@ const Dashboard = () => {
             }}
           >
             <div style={{ display: "flex", gap: "0.6rem" }}>
-              <div>Icon</div>
+            <AiOutlineMessage />
               <div>Campaign Builder</div>
             </div>
             <div style={{ fontSize: "1.5rem" }}>
@@ -174,7 +179,7 @@ const Dashboard = () => {
               gap: "1rem",
             }}>
           <div style={{ display: "flex", gap: "0.6rem" }}>
-              <div>Icon</div>
+              <AiOutlineMessage />
               <div>Campaign Builder</div>
             </div>
             <div style={{ fontSize: "1.5rem" }}>
@@ -210,7 +215,7 @@ const Dashboard = () => {
               gap: "1rem",
             }}>
           <div style={{ display: "flex", gap: "0.6rem" }}>
-              <div>Icon</div>
+          <AiOutlineMessage />
               <div>Campaign Builder</div>
             </div>
             <div style={{ fontSize: "1.5rem" }}>
