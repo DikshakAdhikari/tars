@@ -1,8 +1,9 @@
 
-import { useState } from 'react'
+
+import { Route, Router, Routes } from 'react-router-dom'
 import './App.css'
-import { Search } from './components/Search'
-import YcPosts from './components/ycPosts'
+import Login from './components/Login'
+
 
 
 
@@ -12,7 +13,17 @@ function App() {
 
   return (
     <div style={{backgroundColor:"#FFF0F5", width:"100%" , height:"100vh"}}>
-      <Search />
+
+
+      <Routes>
+
+        <Route path={"/"} element= {<Login />} />
+        
+
+      </Routes>
+
+ 
+    
       
     </div>
   )
