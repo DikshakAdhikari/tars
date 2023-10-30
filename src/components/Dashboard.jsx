@@ -10,7 +10,6 @@ import {FaUserCircle } from 'react-icons/fa'
 
 
 const Dashboard = ({title}) => {
-  const navigate = useNavigate();
 
   return (
     <div className="dashboard">
