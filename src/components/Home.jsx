@@ -2,8 +2,7 @@ import React from 'react'
 import main from "../assets/homepage-min.png";
 import Navbar from './Navbar';
 
-const Home = ({ifSignIn, setSignIn}) => {
-    
+const Home = ({ifSignIn, setSignIn}) => { 
     setSignIn(true);
 
   return (

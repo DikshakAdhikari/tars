@@ -6,7 +6,7 @@ import websiteLogo from '../assets/logo-min.png'
 const Navbar = ({ifSignIn, setSignIn}) => {
 
   const navigate= useNavigate();
-  //console.log(ifSignIn);
+  
   return (
     <div style={{display:'flex',alignItems:"center", justifyContent:"space-between",padding:"1rem"}}>
       <img style={{height:"5vh", width:"3vw"}} src={websiteLogo} alt="" />

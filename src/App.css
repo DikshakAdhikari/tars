@@ -8,15 +8,16 @@ body{
   height:"5vh";
   width: "5vw";
 }
+
+.text{
+  color:#585858;
+  font-size: 1.2rem;
+}
 .dashboard{
   width: 100vw;
   height: 100vh;
   display: flex;
  
-}
-.text{
-  color:#585858;
-  font-size: 1.2rem;
 }
 .sidebar{
  
