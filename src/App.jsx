@@ -21,9 +21,9 @@ function App() {
         <Route path={"/dashboard/PriorityReport"} element= {<Dashboard title='Priority Reports' />} />
         <Route path={"/dashboard/Channels"} element= {<Dashboard title='Channels' />} />
         <Route path={"/dashboard/BuildFlow"} element= {<Dashboard title='Build Flow' />} />
+        <Route path={"/dashboard/Integrations"} element= {<Dashboard title='Integrations' />} />
         <Route path={"/dashboard/KnowledgeBase"} element= {<Dashboard title='Knowledge Base' />} />
         <Route path={"/dashboard/DesignAudit"} element= {<Dashboard title='Design Audit' />} />
-        <Route path={"/dashboard/Integrations"} element= {<Dashboard title='Integrations' />} />
         
         
 
